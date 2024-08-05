@@ -1,0 +1,132 @@
+/* Reset básico e estilização global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #FFF3E0; /* Fundo claro de laranja */
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+#main-header, #main-footer {
+  background-color: #ea580c; /* Laranja mais escuro */
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+#main-footer {
+  background-color: #71717a;
+}
+
+#cart-section {
+  flex-grow: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#cart-list {
+  width: 80%; /* Ajuste de largura para centralização */
+  list-style: none;
+  padding: 20px 0; /* Espaçamento vertical dentro da lista */
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  margin: 10px 0; /* Espaçamento entre itens do carrinho */
+  padding: 15px; /* Preenchimento dentro de cada item do carrinho */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.item-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+  margin-right: 20px; /* Espaçamento entre a imagem e detalhes do item */
+}
+
+.item-info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 12px;
+}
+
+.item-name, .item-price {
+  margin-bottom: 10px; /* Espaçamento entre nome e preço do item */
+}
+
+.quantity-selector {
+  display: flex;
+  align-items: center;
+}
+
+.quantity-btn {
+
+  background-color: #FB8C00;
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.quantity-btn:disabled {
+  cursor: default;
+  opacity: 60%;
+}
+
+.quantity-input {
+  width: 50px;
+  text-align: center;
+  margin: 0 10px; /* Espaçamento horizontal entre botões de quantidade */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  height: 40px;
+}
+
+.remove-btn {
+  background-color: #FF7043; /* Vermelho-alaranjado */
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.total {
+  font-size: 24px;
+}
+
+#checkout-btn {
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #FB8C00;
+  color: white;
+  border: none;
+  padding: 15px 30px; /* Aumento do preenchimento para um botão maior */
+  border-radius: 5px;
+  cursor: pointer;
+  width: 200px; /* Largura fixa para destaque */
+  align-self: center;
+  margin-top: 20px; /* Espaçamento acima do botão de checkout */
+}
